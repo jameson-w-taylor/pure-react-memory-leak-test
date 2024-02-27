@@ -19,6 +19,7 @@ export default function Start() {
       </nav>
 
       Use this app to verify the memory does not exist in this repository when compared to the other <a target="_blank" href="https://github.com/jameson-w-taylor/ionic-react-memory-leak">one</a>.<br />
+      Be sure to run this test in "Incognito Mode", as it seems that the LastPass extension causes a memory leak.<br />
       Open dev tools to the "Memory" tab so you can take heap snapshots.<br />
       <hr />
       First, let's notice what should be normal behavior.<br />
@@ -45,6 +46,7 @@ export default function Start() {
         <li>With the second snapshot selected, use 'ctrl-f' to search for "WhyIsThisHappening?" in the snapshot</li>
         <li>There will be 3 results, all with no timestamp (2 are from the text on this page)</li>
         <li>Repeat as many times as you like, the result should not change (unlike in the other repository)</li>
+        <li>Compared to the Ionic based repository, there does not seem to be an extra reference being kept around. Also the LastPass extension does not seem to create a memory leak with this sample app.</li>
       </ol>
     </div>
   );
